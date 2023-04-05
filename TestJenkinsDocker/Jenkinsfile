@@ -13,6 +13,7 @@ node
 
     def img = stage('Build')
     {
+        sh 'cd /TestJenkinsDocker'
         docker.build("$IMAGE", '.')
     }
     stage('Run')
