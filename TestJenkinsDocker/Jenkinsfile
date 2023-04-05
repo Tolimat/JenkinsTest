@@ -10,10 +10,10 @@ node
     stage('Clone'){
         checkout scm
     }
-    
+
     def img = stage('Build')
     {
-        docker.build("$IMAGE", '.')
+        docker.build("$IMAGE", 'https://github.com/Tolimat/JenkinsTest.git#main:TestJenkinsDocker')
     }
     stage('Run')
     {
