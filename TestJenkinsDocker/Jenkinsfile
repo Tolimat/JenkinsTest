@@ -7,10 +7,15 @@ node
 
     echo "IMAGE = $IMAGE"
 
-    // stage('Clone'){
-    //     checkout scm
-    //     sh 'echo "test"'
-    // }
+    stage('Clone'){
+        checkout scm
+        sh 'echo "test"'
+    }
+
+    dir("TestJenkinsDocker") 
+    {
+        sh "pwd"
+    }
 
     def img = stage('Build')
     {
