@@ -14,7 +14,7 @@ pipeline
         {
             steps 
             {
-                sh 'echo Pipeline sucess'
+                sh 'echo Pipeline success'
             }
         }
     }
