@@ -13,7 +13,7 @@ node
 
     def img = stage('Build')
     {
-        docker.build("$IMAGE", 'https://github.com/Tolimat/JenkinsTest.git#main:TestJenkinsDocker')
+        docker.build("$IMAGE", './TestJenkinsDocker')
     }
     stage('Run')
     {
