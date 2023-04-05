@@ -10,5 +10,12 @@ pipeline
                 sh 'python3 main.py'
             }
         }
+        stage('Confirm') 
+        {
+            steps 
+            {
+                sh 'echo Pipeline sucess'
+            }
+        }
     }
 }
