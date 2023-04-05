@@ -9,11 +9,11 @@ node
 
     stage('Clone'){
         checkout scm
+        sh 'echo "test"'
     }
 
     def img = stage('Build')
     {
-        sh 'cd /TestJenkinsDocker'
         docker.build("$IMAGE", '.')
     }
     stage('Run')
