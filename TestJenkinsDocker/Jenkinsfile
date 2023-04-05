@@ -2,7 +2,7 @@ def pipelineContext = [:]
 
 node
 {
-    def registryProjet = 'TestJenkinsDocker'
+    def registryProjet = 'registry.gitlab.com/tolimat/testjenkinsdocker'
     def IMAGE = "${registryProjet}:version-${env.BUILD_ID}"
 
     echo "IMAGE = $IMAGE"
