@@ -9,14 +9,8 @@ node
 
     stage('Clone'){
         checkout scm
-        sh 'echo "test"'
     }
-
-    dir("TestJenkinsDocker") 
-    {
-        sh "pwd"
-    }
-
+    
     def img = stage('Build')
     {
         docker.build("$IMAGE", '.')
