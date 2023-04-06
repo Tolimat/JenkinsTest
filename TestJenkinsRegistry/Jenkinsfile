@@ -2,7 +2,7 @@ def pipelineContext = [:]
 
 node
 {
-    def registryProjet = '172.17.0.3:5000/dockindock'
+    def registryProjet = 'http://172.17.0.3:5000/dockindock'
     def IMAGE = "${registryProjet}:version-${env.BUILD_ID}"
 
     echo "IMAGE = $IMAGE"
@@ -23,7 +23,7 @@ node
     }
     stage('Push')
     {
-        docker.withRegistry('172.17.0.3:5000')
+        docker.withRegistry('http://172.17.0.3:5000')
         {
             img.push 'latest'
             img.push()
